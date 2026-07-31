@@ -17,8 +17,8 @@ return {
             HardCap = 13,
             MaxCount = 13,
             SoftFail = false,
-            MaxAttempts = 20,
-            MaxCashWait = 90,
+            MaxAttempts = 25,
+            MaxCashWait = 120,
             Shuffle = false,
             ReserveSlots = 1,
             Units = {
@@ -40,7 +40,7 @@ return {
         {
             Type = "StartUpgradeAll",
             Name = "UpgradeAll1",
-            RequireMinPlaced = 13,
+            RequireMinPlaced = 1,
             StopAtWave = 15,
         },
         {
@@ -69,7 +69,7 @@ return {
         {
             Type = "StartUpgradeAll",
             Name = "UpgradeAll2",
-            ForceFromWave = 18,
+            RequireMinPlaced = 1,
             StopAtWave = 19,
         },
         {
@@ -93,6 +93,7 @@ return {
         {
             Type = "StartUpgradeAll",
             Name = "UpgradeAll3",
+            RequireMinPlaced = 0,
             UntilGameEnd = true,
         },
     },
