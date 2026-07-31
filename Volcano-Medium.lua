@@ -12,6 +12,12 @@ return {
     },
     Events = {
         {
+            Type = "StartUpgradeAll",
+            Name = "UpgradeAll_Main",
+            RequireMinPlaced = 1,
+            StopAtWave = 15,
+        },
+        {
             Type = "StartPlace",
             Name = "Place1",
             HardCap = 13,
@@ -38,12 +44,6 @@ return {
             },
         },
         {
-            Type = "StartUpgradeAll",
-            Name = "UpgradeAll1",
-            RequireMinPlaced = 1,
-            StopAtWave = 15,
-        },
-        {
             Type = "WaitWave",
             Wave = 15,
         },
@@ -57,6 +57,7 @@ return {
             MaxCashWait = 12,
             Shuffle = false,
             ReserveSlots = 1,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_cactus", pos = {150.51, -31.57, -47.59}},
                 {name = "unit_cactus", pos = {148.95, -31.57, -49.34}},
@@ -68,7 +69,7 @@ return {
         },
         {
             Type = "StartUpgradeAll",
-            Name = "UpgradeAll2",
+            Name = "UpgradeAll_AfterPlace2",
             RequireMinPlaced = 1,
             StopAtWave = 19,
         },
@@ -86,13 +87,14 @@ return {
             MaxCashWait = 90,
             Shuffle = false,
             ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_ufo", pos = {150.64, -27.28, -38.52}},
             },
         },
         {
             Type = "StartUpgradeAll",
-            Name = "UpgradeAll3",
+            Name = "UpgradeAll_End",
             RequireMinPlaced = 0,
             UntilGameEnd = true,
         },
