@@ -50,12 +50,12 @@ return {
         {
             Type = "StartPlace",
             Name = "Place2",
-            HardCap = 18,
-            MaxCount = 5,
+            HardCap = 19,
+            MaxCount = 6,
             SoftFail = true,
             MaxAttempts = 5,
             MaxCashWait = 12,
-            Shuffle = true,
+            Shuffle = false,
             ReserveSlots = 1,
             Units = {
                 {name = "unit_cactus", pos = {150.51, -31.57, -47.59}},
@@ -63,6 +63,7 @@ return {
                 {name = "unit_cactus", pos = {152.19, -31.57, -45.30}},
                 {name = "unit_cactus", pos = {153.22, -31.57, -43.67}},
                 {name = "unit_cactus", pos = {146.99, -31.57, -51.14}},
+                {name = "unit_cactus", pos = {145.11, -31.57, -52.78}, chance = 0.5},
             },
         },
         {
