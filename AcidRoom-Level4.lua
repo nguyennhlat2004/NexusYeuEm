@@ -1,6 +1,6 @@
 return {
     Name = "Acid Room ( Level 4 )",
-    Difficulty = "dif_normal",
+    Difficulty = "dif_insane",
     MaxPlace = 20,
     UfoReserve = 0,
     DefaultAngle = {-math.pi, 0, -math.pi},
