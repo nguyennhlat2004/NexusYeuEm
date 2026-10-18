@@ -21,7 +21,7 @@ return {
             SoftFail = false,
             MaxAttempts = 80,
             MaxCashWait = 900,
-            Shuffle = false,
+            Shuffle = true,
             ReserveSlots = 0,
             Units = {
                 {name = "unit_razor_rainbow", pos = {-4.14, 2.00, 329.10}},
@@ -49,7 +49,7 @@ return {
             SoftFail = false,
             MaxAttempts = 80,
             MaxCashWait = 900,
-            Shuffle = false,
+            Shuffle = true,
             ReserveSlots = 0,
             PauseUpgrade = true,
             Units = {
@@ -74,7 +74,7 @@ return {
             SoftFail = false,
             MaxAttempts = 80,
             MaxCashWait = 900,
-            Shuffle = false,
+            Shuffle = true,
             ReserveSlots = 0,
             PauseUpgrade = true,
             Units = {
@@ -101,7 +101,7 @@ return {
             SoftFail = false,
             MaxAttempts = 80,
             MaxCashWait = 900,
-            Shuffle = false,
+            Shuffle = true,
             ReserveSlots = 0,
             PauseUpgrade = true,
             Units = {
@@ -131,7 +131,7 @@ return {
             SoftFail = false,
             MaxAttempts = 80,
             MaxCashWait = 900,
-            Shuffle = false,
+            Shuffle = true,
             ReserveSlots = 0,
             PauseUpgrade = true,
             Units = {
