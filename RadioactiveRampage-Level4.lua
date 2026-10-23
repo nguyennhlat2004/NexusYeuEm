@@ -1,5 +1,5 @@
 return {
-    Name = "Acid Room ( Level 4 )",
+    Name = "Radioactive Rampage ( Level 4 )",
     Difficulty = "dif_insane",
     MaxPlace = 20,
     UfoReserve = 0,
