@@ -20,15 +20,7 @@ return {
         {FromWave = 0, ToWave = 32},
     },
     AutoSkipOff = {
-        {FromWave = 28, ToWave = 33},
-    },
-    SkipGuard = {
-        FromWave = 16,
-        ToWave = 23,
-        TriggerZ = 285.35,
-        Compare = "less",
-        EnemyMatch = "enemy",
-        ConfirmChecks = 2,
+        {FromWave = 23, ToWave = 31},
     },
     Groups = {
         {
