@@ -18,9 +18,6 @@ return {
         unit_black_hole = 3,
         unit_bronze_lucky_chomp = 5,
     },
-    SellAtWave = {
-        {Wave = 35, Unit = "unit_stringshade", Count = 2},
-    },
     Groups = {
         {
             Name = "Trithorn",
