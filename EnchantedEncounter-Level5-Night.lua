@@ -1,6 +1,7 @@
 return {
     Name = "Enchanted Encounter Night ( Level 5 )",
     Engine = "slots",
+    Night = true,
     Difficulty = "dif_impossible",
     StopAutoSkipAtWave = 33,
     DefaultAngle = {-math.pi, 0, -math.pi},
