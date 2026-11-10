@@ -1,9 +1,13 @@
 return {
     Name = "Enchanted Encounter ( Level 5 )",
-    Engine = "slots",
     Difficulty = "dif_impossible",
+    MaxPlace = 20,
+    UfoReserve = 0,
     DefaultAngle = {-math.pi, 0, -math.pi},
     DefaultRotation = 180,
+    Abilities = {
+        {Unit = "unit_lava_shroom", Interval = 2},
+    },
     Price = {
         unit_razor_rainbow = 200,
         unit_life_flower = 1300,
@@ -11,17 +15,17 @@ return {
         unit_bloodvine = 2000,
         unit_lava_shroom = 3250,
     },
-    Limit = {
-        unit_bloodvine = 5,
-        unit_lava_shroom = 3,
-    },
-    Abilities = {
-        {Unit = "unit_lava_shroom", Interval = 2},
-    },
-    Groups = {
+    Events = {
         {
-            Name = "Rainbow",
-            FromWave = 0,
+            Type = "StartPlace",
+            Name = "Place1_Rainbow",
+            HardCap = 6,
+            MaxCount = 6,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
             Units = {
                 {name = "unit_razor_rainbow", pos = {-339.91, 61.68, -69.11}},
                 {name = "unit_razor_rainbow", pos = {-339.55, 61.68, -72.08}},
@@ -32,15 +36,45 @@ return {
             },
         },
         {
-            Name = "Ember",
-            FromWave = 9,
+            Type = "StartUpgradeAll",
+            Name = "Upgrade_Main",
+            RequireMinPlaced = 1,
+            UntilGameEnd = true,
+        },
+        {
+            Type = "WaitWave",
+            Wave = 9,
+        },
+        {
+            Type = "StartPlace",
+            Name = "Place2_Ember",
+            HardCap = 7,
+            MaxCount = 1,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_life_flower", pos = {-335.72, 61.68, -122.21}},
             },
         },
         {
-            Name = "BlackHole",
-            FromWave = 18,
+            Type = "WaitWave",
+            Wave = 18,
+        },
+        {
+            Type = "StartPlace",
+            Name = "Place3_BlackHole",
+            HardCap = 10,
+            MaxCount = 3,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_black_hole", pos = {-338.76, 61.68, -124.50}},
                 {name = "unit_black_hole", pos = {-335.42, 61.68, -125.40}},
@@ -48,8 +82,20 @@ return {
             },
         },
         {
-            Name = "Bloodvine",
-            FromWave = 27,
+            Type = "WaitWave",
+            Wave = 27,
+        },
+        {
+            Type = "StartPlace",
+            Name = "Place4_Bloodvine",
+            HardCap = 15,
+            MaxCount = 5,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_bloodvine", pos = {-333.76, 61.68, -129.80}},
                 {name = "unit_bloodvine", pos = {-339.06, 61.68, -130.02}},
@@ -59,8 +105,20 @@ return {
             },
         },
         {
-            Name = "Ashroom",
-            FromWave = 30,
+            Type = "WaitWave",
+            Wave = 30,
+        },
+        {
+            Type = "StartPlace",
+            Name = "Place5_Ashroom",
+            HardCap = 18,
+            MaxCount = 3,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_lava_shroom", pos = {-340.10, 61.68, -114.17}},
                 {name = "unit_lava_shroom", pos = {-330.93, 61.68, -114.18}},
@@ -75,10 +133,17 @@ return {
         EnemyMatch = "enemy",
         ConfirmChecks = 2,
         SellAll = true,
-        Groups = {
+        Events = {
             {
-                Name = "Stage2",
-                FromWave = 0,
+                Type = "StartPlace",
+                Name = "Stage2_Units",
+                HardCap = 12,
+                MaxCount = 12,
+                SoftFail = false,
+                MaxAttempts = 80,
+                MaxCashWait = 900,
+                Shuffle = false,
+                ReserveSlots = 0,
                 Units = {
                     {name = "unit_bloodvine", pos = {-340.29, 61.68, -212.21}},
                     {name = "unit_bloodvine", pos = {-339.80, 61.68, -216.59}},
@@ -93,6 +158,12 @@ return {
                     {name = "unit_black_hole", pos = {-331.44, 61.68, -232.74}},
                     {name = "unit_black_hole", pos = {-339.77, 61.68, -233.83}},
                 },
+            },
+            {
+                Type = "StartUpgradeAll",
+                Name = "Stage2_Upgrade",
+                RequireMinPlaced = 1,
+                UntilGameEnd = true,
             },
         },
     },
