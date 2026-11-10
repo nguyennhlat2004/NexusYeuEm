@@ -1,9 +1,13 @@
 return {
     Name = "Radioactive Rampage ( Level 5 )",
-    Engine = "slots",
     Difficulty = "dif_impossible",
+    MaxPlace = 20,
+    UfoReserve = 0,
     DefaultAngle = {-math.pi, 0, -math.pi},
     DefaultRotation = 180,
+    AutoSkipOff = {
+        {FromWave = 23, ToWave = 31},
+    },
     Price = {
         unit_trithorn = 333,
         unit_life_flower = 1300,
@@ -11,35 +15,61 @@ return {
         unit_stringshade = 2777,
         unit_bronze_lucky_chomp = 4500,
     },
-    Limit = {
-        unit_bloodvine = 5,
-        unit_stringshade = 3,
-        unit_bronze_lucky_chomp = 5,
-    },
-    UpgradeWindows = {
-        {FromWave = 0, ToWave = 32},
-    },
-    AutoSkipOff = {
-        {FromWave = 23, ToWave = 31},
-    },
-    Groups = {
+    Events = {
         {
-            Name = "Trithorn",
-            FromWave = 0,
+            Type = "StartPlace",
+            Name = "Place1_Trithorn",
+            HardCap = 1,
+            MaxCount = 1,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
             Units = {
                 {name = "unit_trithorn", pos = {-4.40, 2.00, 323.07}},
             },
         },
         {
-            Name = "Ember",
-            FromWave = 4,
+            Type = "StartUpgradeAll",
+            Name = "Upgrade_Main",
+            RequireMinPlaced = 1,
+            StopAtWave = 33,
+        },
+        {
+            Type = "WaitWave",
+            Wave = 4,
+        },
+        {
+            Type = "StartPlace",
+            Name = "Place2_Ember",
+            HardCap = 2,
+            MaxCount = 1,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_life_flower", pos = {-4.98, 2.00, 294.49}},
             },
         },
         {
-            Name = "Bloodvine + Stringshade",
-            FromWave = 16,
+            Type = "WaitWave",
+            Wave = 16,
+        },
+        {
+            Type = "StartPlace",
+            Name = "Place3_Bloodvine_Stringshade",
+            HardCap = 10,
+            MaxCount = 8,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_bloodvine", pos = {-17.08, 2.00, 292.68}},
                 {name = "unit_stringshade", pos = {-17.59, 2.00, 309.46}},
@@ -52,8 +82,20 @@ return {
             },
         },
         {
-            Name = "Flytrap RNG",
-            FromWave = 24,
+            Type = "WaitWave",
+            Wave = 24,
+        },
+        {
+            Type = "StartPlace",
+            Name = "Place4_FlytrapRNG",
+            HardCap = 15,
+            MaxCount = 5,
+            SoftFail = false,
+            MaxAttempts = 80,
+            MaxCashWait = 900,
+            Shuffle = true,
+            ReserveSlots = 0,
+            PauseUpgrade = true,
             Units = {
                 {name = "unit_bronze_lucky_chomp", pos = {-15.25, 2.00, 311.39}},
                 {name = "unit_bronze_lucky_chomp", pos = {-19.71, 2.00, 309.31}},
