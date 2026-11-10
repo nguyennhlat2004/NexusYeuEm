@@ -51,8 +51,8 @@ return {
             ReserveSlots = 0,
             PauseUpgrade = true,
             Units = {
-                {name = "unit_mint_bloom", pos = {-329.00, 61.68, -93.79}},
-                {name = "unit_mint_bloom", pos = {-342.75, 61.68, -93.48}},
+                {name = "unit_mint_bloom", pos = {-330.29, 65.75, -129.11}},
+                {name = "unit_mint_bloom", pos = {-339.21, 61.68, -128.51}},
             },
         },
         {
