@@ -59,7 +59,7 @@ return {
                 Use = 2,
             },
             TimedUse = {
-                {Wave = 36, Delay = 8, Use = 2},
+                {Wave = 36, Delay = 8, Use = 1},
             },
         },
     },
