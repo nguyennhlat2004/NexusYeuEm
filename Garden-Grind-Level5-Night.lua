@@ -12,7 +12,10 @@ return {
     },
     SkipRules = {
         FromWave = 31,
-        MaxTotalHP = 500000,
+        ForceWaves = {31, 32, 34, 35, 38},
+        MaxTotalHP = 1000000,
+        FewEnemies = 3,
+        FewMaxHP = 2000000,
         BlockEnemy = "enemy_jockey",
         LockWaveOnBlock = true,
         MinBursts = 2,
@@ -20,6 +23,8 @@ return {
         Settle = 1.5,
         SlowZ = -199.818,
         TowardZ = -145.56,
+        SlowX = -892.286,
+        TowardX = -846.80,
     },
     BossSell = {
         Wave = 40,
@@ -32,6 +37,7 @@ return {
         {
             Unit = "unit_venom_plant",
             Interval = 1,
+            SpamFromWave = 39,
             Trigger = {
                 Ref = "unit_trithorn",
                 RefPos = {-846.80, 61.93, -165.55},
