@@ -13,6 +13,9 @@ return {
     SkipRules = {
         FromWave = 31,
         ForceWaves = {31, 32, 34, 35, 38},
+        ForceJockeyLimit = {
+            {Wave = 34, Max = 2},
+        },
         MaxTotalHP = 1000000,
         FewEnemies = 3,
         FewMaxHP = 2000000,
@@ -54,6 +57,9 @@ return {
                 Enemy = "enemy_jockey",
                 Settle = 1.5,
                 Use = 2,
+            },
+            TimedUse = {
+                {Wave = 36, Delay = 8, Use = 2},
             },
         },
     },
